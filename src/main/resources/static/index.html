@@ -35,8 +35,10 @@
     // 或者，只是一个组件配置对象。
     // 我们晚点在讨论嵌套路由。
     const routes = [
+        { path: '/'},
         { path: '/foo', component: Foo },
-        { path: '/bar', component: Bar }
+        { path: '/bar', component: Bar },
+        { path: '*', component: { template: '<div>not found</div>' } }
     ]
 
     // 3. 创建 router 实例，然后传 `routes` 配置
